@@ -53,14 +53,14 @@ const apolloProvider = new VueApollo({
 ```js
 this.$apollo.skipAllQueries = true
 this.$apollo.skipAllSubscriptions = true
-this.$apollo.skipAll = true
+this.$apollo.skip = true
 ```
 
 你也可以在组件的 `apollo` 选项中声明这些属性。它们可以是布尔值：
 
 ```js
 apollo: {
-  $skipAll: true
+  $skip: true
 }
 ```
 
@@ -68,7 +68,7 @@ apollo: {
 
 ```js
 apollo: {
-  $skipAll () {
+  $skip () {
     return this.foo === 42
   }
 }
